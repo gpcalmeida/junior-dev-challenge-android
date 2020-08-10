@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Junior Android Dev Challenge</string>
+
+    <string name="film_name">Nome: </string>
+    <string name="film_episode">Episódio: </string>
+    <string name="film_director">Diretor: </string>
+    <string name="refresh_button">Atualizar</string>
+</resources>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/film_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/episode_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/film_episode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_label_text_view" />
+
+        <TextView
+            android:id="@+id/director_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/film_director"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episode_label_text_view" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/title_label_text_view"
+            app:layout_constraintTop_toTopOf="@id/title_label_text_view"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/episode_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="59dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/episode_label_text_view"
+            app:layout_constraintStart_toEndOf="@id/episode_label_text_view"/>
+
+        <TextView
+            android:id="@+id/director_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/director_label_text_view"
+            app:layout_constraintTop_toTopOf="@id/director_label_text_view"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <TextView
+            android:id="@+id/full_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/director_label_text_view"
+            tools:layout_editor_absoluteY="85dp" />
+
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/episode_five_image_view"
+            android:text="@string/refresh_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        
+        <ImageView
+            android:id="@+id/episode_one_image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@null"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/episode_1_opt"
+            app:layout_constraintTop_toBottomOf="@id/full_name_text_view"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline"
+            />
+
+        <ImageView
+            android:id="@+id/episode_two_image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/episode_2_opt"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toTopOf="@id/episode_one_image_view"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            />
+
+        <ImageView
+            android:id="@+id/episode_three_image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/episode_3_opt"
+            app:layout_constraintTop_toBottomOf="@id/episode_one_image_view"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline"
+            />
+
+        <ImageView
+            android:id="@+id/episode_four_image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/episode_4_opt"
+            android:layout_marginStart="8dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toBottomOf="@id/episode_one_image_view"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            />
+
+        <ImageView
+            android:id="@+id/episode_five_image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/episode_5_opt"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toBottomOf="@id/episode_three_image_view"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline"
+            />
+
+        <ImageView
+            android:id="@+id/episode_six_image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/episode_6_opt"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toBottomOf="@id/episode_three_image_view"
+            app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+            />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/verticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+        
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
